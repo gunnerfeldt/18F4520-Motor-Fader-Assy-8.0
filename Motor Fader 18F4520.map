@@ -1,0 +1,989 @@
+MPLINK 4.48, Linker
+Linker Map File - Created Sun Apr 13 10:05:45 2014
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+               _entry_scn       code   0x000000    program   0x000006
+           .code___init.o       code   0x000006    program   0x000002
+              high_vector       code   0x000008    program   0x000006
+          .code_adcbusy.o       code   0x00000e    program   0x00000a
+               low_vector       code   0x000018    program   0x00027c
+                   .cinit    romdata   0x000294    program   0x00003e
+      .code_PWM_routine.o       code   0x0002d2    program   0x0007ba
+          .code_main3.0.o       code   0x000a8c    program   0x0002dc
+                     PROG       code   0x000d68    program   0x00029e
+      .code_LED_routine.o       code   0x001006    program   0x000270
+ .code_SWITCHES_routine.o       code   0x001276    program   0x00024e
+               _cinit_scn       code   0x0014c4    program   0x00009e
+          .code_pw2open.o       code   0x001562    program   0x000076
+      .code_SPI_routine.o       code   0x0015d8    program   0x000076
+          .code_fxm3232.o       code   0x00164e    program   0x000070
+          .code_adcopen.o       code   0x0016be    program   0x00006e
+         .code_spi_open.o       code   0x00172c    program   0x000068
+             .code_fabs.o       code   0x001794    program   0x000066
+         .code_pw2setdc.o       code   0x0017fa    program   0x00005e
+         .code_pw1setdc.o       code   0x001858    program   0x00005e
+         .code_fxd3232u.o       code   0x0018b6    program   0x000048
+           .code_t0open.o       code   0x0018fe    program   0x000038
+           .code_t2open.o       code   0x001936    program   0x000036
+          .code_pw1open.o       code   0x00196c    program   0x000030
+         .code_adcsetch.o       code   0x00199c    program   0x00002e
+         .code_fxd1616u.o       code   0x0019ca    program   0x00002c
+                    .code       code   0x0019f6    program   0x000020
+             _startup_scn       code   0x001a16    program   0x00001c
+         .code_fxd0808u.o       code   0x001a32    program   0x00001c
+          .code_adcconv.o       code   0x001a4e    program   0x000004
+      .romdata_pw1setdc.o    romdata   0x001a52    program   0x000000
+       .idata_pw2open.o_i    romdata   0x001a52    program   0x000000
+       .romdata_pw1open.o    romdata   0x001a52    program   0x000000
+       .romdata_pw2open.o    romdata   0x001a52    program   0x000000
+      .idata_pw1setdc.o_i    romdata   0x001a52    program   0x000000
+       .idata_pw1open.o_i    romdata   0x001a52    program   0x000000
+      .idata_spi_open.o_i    romdata   0x001a52    program   0x000000
+      .romdata_spi_open.o    romdata   0x001a52    program   0x000000
+      .idata_pw2setdc.o_i    romdata   0x001a52    program   0x000000
+        .idata_t0open.o_i    romdata   0x001a52    program   0x000000
+          .romdata_fabs.o    romdata   0x001a52    program   0x000000
+        .romdata_t0open.o    romdata   0x001a52    program   0x000000
+        .idata_t2open.o_i    romdata   0x001a52    program   0x000000
+        .romdata_t2open.o    romdata   0x001a52    program   0x000000
+        .romdata___init.o    romdata   0x001a52    program   0x000000
+      .romdata_adcsetch.o    romdata   0x001a52    program   0x000000
+      .romdata_pw2setdc.o    romdata   0x001a52    program   0x000000
+       .romdata_main3.0.o    romdata   0x001a52    program   0x000000
+       .idata_main3.0.o_i    romdata   0x001a52    program   0x000017
+   .romdata_LED_routine.o    romdata   0x001a52    program   0x000000
+   .romdata_SPI_routine.o    romdata   0x001a52    program   0x000000
+.romdata_SWITCHES_routine.o    romdata   0x001a52    program   0x000000
+       .romdata_adcbusy.o    romdata   0x001a52    program   0x000000
+       .romdata_adcconv.o    romdata   0x001a52    program   0x000000
+      .romdata_fxd0808u.o    romdata   0x001a52    program   0x000000
+   .romdata_PWM_routine.o    romdata   0x001a52    program   0x000000
+      .romdata_fxd1616u.o    romdata   0x001a52    program   0x000000
+      .romdata_fxd3232u.o    romdata   0x001a52    program   0x000000
+         .romdata_c018i.o    romdata   0x001a52    program   0x000000
+       .romdata_fxm3232.o    romdata   0x001a52    program   0x000000
+       .romdata_adcopen.o    romdata   0x001a52    program   0x000000
+        .idata___init.o_i    romdata   0x001a69    program   0x000000
+.idata_SWITCHES_routine.o_i    romdata   0x001a69    program   0x000002
+          .idata_fabs.o_i    romdata   0x001a69    program   0x000000
+         .idata_c018i.o_i    romdata   0x001a69    program   0x000000
+      .idata_adcsetch.o_i    romdata   0x001a69    program   0x000000
+       .idata_adcbusy.o_i    romdata   0x001a69    program   0x000000
+       .idata_adcconv.o_i    romdata   0x001a69    program   0x000000
+      .idata_fxd0808u.o_i    romdata   0x001a69    program   0x000000
+      .idata_fxd1616u.o_i    romdata   0x001a69    program   0x000000
+      .idata_fxd3232u.o_i    romdata   0x001a69    program   0x000000
+       .idata_fxm3232.o_i    romdata   0x001a69    program   0x000000
+       .idata_adcopen.o_i    romdata   0x001a69    program   0x000000
+   .idata_SPI_routine.o_i    romdata   0x001a6b    program   0x000002
+   .idata_PWM_routine.o_i    romdata   0x001a6d    program   0x00002a
+   .idata_LED_routine.o_i    romdata   0x001a97    program   0x000054
+            .code_c018i.o       code   0x001aec    program   0x000000
+ .config_300003_main3.0.o    romdata   0x300003    program   0x000001
+                 .tmpdata      udata   0x000000       data   0x000020
+          volatile_access      udata   0x000020       data   0x00001b
+                MATH_DATA      udata   0x00003b       data   0x000014
+           LowISRCode_tmp      udata   0x00004f       data   0x000006
+     .idata_LED_routine.o      idata   0x000080       data   0x000054
+     .idata_PWM_routine.o      idata   0x0000d4       data   0x00002a
+.idata_SWITCHES_routine.o      idata   0x0000fe       data   0x000002
+         .idata_main3.0.o      idata   0x000100       data   0x000017
+     .udata_PWM_routine.o      udata   0x000117       data   0x000010
+           .udata_c018i.o      udata   0x000127       data   0x00000a
+.udata_SWITCHES_routine.o      udata   0x000131       data   0x000004
+     .idata_SPI_routine.o      idata   0x000135       data   0x000002
+         .idata_pw1open.o      idata   0x000137       data   0x000000
+         .udata_pw2open.o      udata   0x000137       data   0x000000
+         .idata_pw2open.o      idata   0x000137       data   0x000000
+        .udata_spi_open.o      udata   0x000137       data   0x000000
+        .idata_spi_open.o      idata   0x000137       data   0x000000
+          .udata_t0open.o      udata   0x000137       data   0x000000
+          .idata_t0open.o      idata   0x000137       data   0x000000
+          .udata_t2open.o      udata   0x000137       data   0x000000
+          .idata_t2open.o      idata   0x000137       data   0x000000
+        .udata_adcsetch.o      udata   0x000137       data   0x000000
+        .idata_adcsetch.o      idata   0x000137       data   0x000000
+        .udata_pw1setdc.o      udata   0x000137       data   0x000000
+        .idata_pw1setdc.o      idata   0x000137       data   0x000000
+        .udata_pw2setdc.o      udata   0x000137       data   0x000000
+        .idata_pw2setdc.o      idata   0x000137       data   0x000000
+            .idata_fabs.o      idata   0x000137       data   0x000000
+          .udata___init.o      udata   0x000137       data   0x000000
+            .udata_fabs.o      udata   0x000137       data   0x000000
+          .idata___init.o      idata   0x000137       data   0x000000
+           .idata_c018i.o      idata   0x000137       data   0x000000
+     .udata_LED_routine.o      udata   0x000137       data   0x000000
+         .udata_main3.0.o      udata   0x000137       data   0x000000
+     .udata_SPI_routine.o      udata   0x000137       data   0x000000
+         .udata_adcbusy.o      udata   0x000137       data   0x000000
+         .idata_adcbusy.o      idata   0x000137       data   0x000000
+         .udata_adcconv.o      udata   0x000137       data   0x000000
+         .idata_adcconv.o      idata   0x000137       data   0x000000
+        .udata_fxd0808u.o      udata   0x000137       data   0x000000
+        .idata_fxd0808u.o      idata   0x000137       data   0x000000
+        .udata_fxd1616u.o      udata   0x000137       data   0x000000
+        .idata_fxd1616u.o      idata   0x000137       data   0x000000
+        .udata_fxd3232u.o      udata   0x000137       data   0x000000
+        .idata_fxd3232u.o      idata   0x000137       data   0x000000
+         .udata_fxm3232.o      udata   0x000137       data   0x000000
+         .idata_fxm3232.o      idata   0x000137       data   0x000000
+         .udata_adcopen.o      udata   0x000137       data   0x000000
+         .idata_adcopen.o      idata   0x000137       data   0x000000
+         .udata_pw1open.o      udata   0x000137       data   0x000000
+                   .stack      udata   0x000500       data   0x000100
+            SFR_UNBANKED0      udata   0x000f80       data   0x000080
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x001aea      
+                            0x300003    0x300003      
+            6892 out of 33048 program addresses used, program memory utilization is 20%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  BusyADC   0x00000e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcbusy.c
+      Calculate_Motor_PWM   0x0002d2    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+               ConvertADC   0x001a4e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
+                   D3232S   0x000dce    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                D3232SNEG   0x000ddc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                 D3232SOK   0x000dd8    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                  D3232SX   0x000dfc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                  DA3232S   0x000db8    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                 FLO3232S   0x000d6c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cast32FP.asm
+                 FLO3232U   0x000d68    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cast32FP.asm
+                 FXD0808U   0x001a32    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808u.c
+                 FXD1616U   0x0019ca    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                 FXD3232S   0x000d9e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                 FXD3232U   0x0018b6    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                 FXM1616S   0x000e06    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                 FXM1616U   0x000e60    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616u.asm
+                  FXM3232   0x00164e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+             Handle_Fader   0x0005ba    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+              Handle_LEDs   0x0011d6    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+              HighISRCode   0x00001e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                  INT3216   0x000e9c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                     Init   0x000b08    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+               Init_Fader   0x000ba4    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+               LowISRCode   0x000080    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                  OpenADC   0x0016be    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
+                 OpenPWM1   0x00196c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\PWM\pw1open.c
+         OpenPWM1ConfigIO   0x001998    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\PWM\pw1open.c
+                 OpenPWM2   0x001562    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\PWM\pw2open.c
+                  OpenSPI   0x00172c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\SPI\spi_open.c
+               OpenTimer0   0x0018fe    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
+               OpenTimer2   0x001936    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t2open.c
+                 Read_ADC   0x00082c    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                 Read_SPI   0x0015d8    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+            Read_Switches   0x001276    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SWITCHES_routine.c
+               Scan_Touch   0x0013f2    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SWITCHES_routine.c
+               SetChanADC   0x00199c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcsetch.c
+                SetDCPWM1   0x001858    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\PWM\pw1setdc.c
+                SetDCPWM2   0x0017fa    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\PWM\pw2setdc.c
+                 SetScale   0x000a04    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                SlideShow   0x001160    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+                Start_ADC   0x00081e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+         Start_Scan_Touch   0x0013d0    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SWITCHES_routine.c
+               TSIGN1616A   0x000e52    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+       Update_LED_Display   0x001098    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+  Update_LED_Display_Bits   0x001006    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+                Write_SPI   0x0015f0    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+                 __FpExit   0x000f06    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                 __FpPack   0x000f32    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+            __FpReturnNaN   0x000efa    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+         __FpReturnNegInf   0x000f0c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnNegZero   0x000f24    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+         __FpReturnPosInf   0x000f12    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnPosZero   0x000f2c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnSignInf   0x000f08    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+       __FpReturnSignZero   0x000f20    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+              __FpReturnW   0x000f8a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+              __FpUnPackA   0x000faa    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+              __FpUnPackB   0x000fda    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+         ___else_lbl00002   0x00159e    program     static                          
+         ___else_lbl00004   0x0015ac    program     static                          
+           ___if_lbl00001   0x0015a2    program     static                          
+           ___if_lbl00003   0x0015ae    program     static                          
+       ___return_lbl00000   0x0015c0    program     static                          
+       ___return_lbl00000   0x00000c    program     static                          
+       ___return_lbl00000   0x0018fc    program     static                          
+       ___return_lbl00000   0x0019f4    program     static                          
+       ___return_lbl00000   0x001a4c    program     static                          
+       ___return_lbl00000   0x0016bc    program     static                          
+       ___return_lbl00000   0x000004    program     static                          
+       ___return_lbl00001   0x00001c    program     static                          
+       ___return_lbl00001   0x001a30    program     static                          
+       ___return_lbl00002   0x001560    program     static                          
+               __config_0   0x300003    program     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                   __init   0x000006    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+            __zero_memory   0x0019f6    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                _do_cinit   0x0014c4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                   _entry   0x000000    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                   _false   0x0018f8    program     static                          
+                 _startup   0x001a16    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                compare_l   0x001a0c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                copy_loop   0x001536    program     static                          
+            copy_one_byte   0x00153c    program     static                          
+                     done   0x001560    program     static                          
+             done_copying   0x00154a    program     static                          
+                  endloop   0x0019f0    program     static                          
+                  endloop   0x001a48    program     static                          
+                     fabs   0x001794    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\fabs.c
+                  getData   0x001600    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+ interrupt_at_high_vector   0x000008    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+  interrupt_at_low_vector   0x000018    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                    jExit   0x000ef8    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                jI2F32Beg   0x000d84    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cast32FP.asm
+                    jLoop   0x000ed8    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                jLoopExit   0x000ee8    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                     jMax   0x000eac    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jMaxNeg   0x000eba    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jMaxPos   0x000eb0    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jNotInf   0x000ec8    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jPkLoop   0x000f40    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+             jPkRoundDone   0x000f8a    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+               jPkRoundIt   0x000f72    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+             jPkShiftDone   0x000f5c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+           jReturnPosInf0   0x000f16    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                  jUnpkA1   0x000fb4    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkA2   0x000fcc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkANZ   0x000fc2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkB1   0x000fe4    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkB2   0x000ffc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkBNZ   0x000ff2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkNaN   0x000fd6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                    jZero   0x000ec2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+               jZero1and2   0x000f1a    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                     loop   0x001a26    program     static                          
+                     loop   0x001a3a    program     static                          
+                     loop   0x0018c4    program     static                          
+                     loop   0x0019d4    program     static                          
+                   loop_h   0x001a04    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_l   0x001a0e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     main   0x000a8c    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                 setData1   0x001622    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+                 setData2   0x001638    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+                     test   0x0014de    program     static                          
+               zero_block   0x001a04    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   ADCON0   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               ADCON0bits   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   ADCON1   0x000fc1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               ADCON1bits   0x000fc1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   ADCON2   0x000fc0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               ADCON2bits   0x000fc0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    ADRES   0x000fc3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   ADRESH   0x000fc4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   ADRESL   0x000fc3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   AttCnt   0x000106       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+           AttentionBlink   0x00010a       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                  BAUDCON   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              BAUDCONbits   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  BAUDCTL   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              BAUDCTLbits   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                      BSR   0x000fe0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 BlinkCnt   0x000104       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                 BlinkLED   0x00010b       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                 BotLimit   0x0000f6       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                  CCP1CON   0x000fbd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              CCP1CONbits   0x000fbd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  CCP2CON   0x000fba       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              CCP2CONbits   0x000fba       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    CCPR1   0x000fbe       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   CCPR1H   0x000fbf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   CCPR1L   0x000fbe       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    CCPR2   0x000fbb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   CCPR2H   0x000fbc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   CCPR2L   0x000fbb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    CMCON   0x000fb4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                CMCONbits   0x000fb4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   CVRCON   0x000fb5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               CVRCONbits   0x000fb5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     DDRA   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 DDRAbits   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     DDRB   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 DDRBbits   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     DDRC   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 DDRCbits   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     DDRD   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 DDRDbits   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     DDRE   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 DDREbits   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    D_REG   0x00011f       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                  D_SPEED   0x000121       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                  ECCP1AS   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              ECCP1ASbits   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 ECCP1DEL   0x000fb7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+             ECCP1DELbits   0x000fb7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   ECCPAS   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               ECCPASbits   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    EEADR   0x000fa9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   EECON1   0x000fa6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               EECON1bits   0x000fa6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   EECON2   0x000fa7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   EEDATA   0x000fa8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     FSR0   0x000fe9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    FSR0H   0x000fea       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    FSR0L   0x000fe9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     FSR1   0x000fe1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    FSR1H   0x000fe2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    FSR1L   0x000fe1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     FSR2   0x000fd9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    FSR2H   0x000fda       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    FSR2L   0x000fd9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                FaderGoal   0x000115       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                FaderGoal   0x000022       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+           FaderGoalSteps   0x00002c       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+            FaderPosition   0x00002e       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+               FaderReady   0x00010c       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                  HLVDCON   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              HLVDCONbits   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 I2Cstate   0x000030       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                    INDF0   0x000fef       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    INDF1   0x000fe7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    INDF2   0x000fdf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   INTCON   0x000ff2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  INTCON2   0x000ff1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              INTCON2bits   0x000ff1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  INTCON3   0x000ff0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              INTCON3bits   0x000ff0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               INTCONbits   0x000ff2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     IPR1   0x000f9f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 IPR1bits   0x000f9f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     IPR2   0x000fa2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 IPR2bits   0x000fa2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  InitCnt   0x00010f       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+             InitCntDelay   0x00002a       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                     LATA   0x000f89       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 LATAbits   0x000f89       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     LATB   0x000f8a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 LATBbits   0x000f8a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     LATC   0x000f8b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 LATCbits   0x000f8b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     LATD   0x000f8c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 LATDbits   0x000f8c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     LATE   0x000f8d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 LATEbits   0x000f8d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  LETTERA   0x0000b4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+                  LETTERB   0x0000c4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+                   LVDCON   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               LVDCONbits   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 LastGoal   0x0000fc       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+               LocalTouch   0x0000fe       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SWITCHES_routine.c
+                  LoopCnt   0x000026       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                NewDataIn   0x000024       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                   OSCCON   0x000fd3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               OSCCONbits   0x000fd3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  OSCTUNE   0x000f9b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              OSCTUNEbits   0x000f9b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                       PC   0x000ff9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                      PCL   0x000ff9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   PCLATH   0x000ffa       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   PCLATU   0x000ffb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     PIE1   0x000f9d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 PIE1bits   0x000f9d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     PIE2   0x000fa0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 PIE2bits   0x000fa0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     PIR1   0x000f9e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 PIR1bits   0x000f9e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     PIR2   0x000fa1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 PIR2bits   0x000fa1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   PLUSW0   0x000feb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   PLUSW1   0x000fe3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   PLUSW2   0x000fdb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    PORTA   0x000f80       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                PORTAbits   0x000f80       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    PORTB   0x000f81       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                PORTBbits   0x000f81       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    PORTC   0x000f82       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                PORTCbits   0x000f82       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    PORTD   0x000f83       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                PORTDbits   0x000f83       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    PORTE   0x000f84       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                PORTEbits   0x000f84       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 POSTDEC0   0x000fed       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 POSTDEC1   0x000fe5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 POSTDEC2   0x000fdd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 POSTINC0   0x000fee       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 POSTINC1   0x000fe6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 POSTINC2   0x000fde       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                      PR2   0x000fcb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  PREINC0   0x000fec       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  PREINC1   0x000fe4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  PREINC2   0x000fdc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     PROD   0x000ff3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    PRODH   0x000ff4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    PRODL   0x000ff3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  PWM1CON   0x000fb7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              PWM1CONbits   0x000fb7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+        PreviousFaderGoal   0x000020       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                     RCON   0x000fd0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 RCONbits   0x000fd0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    RCREG   0x000fae       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    RCSTA   0x000fab       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                RCSTAbits   0x000fab       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 SEGMENTA   0x000080       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+                 SEGMENTB   0x00009a       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+                     SIGN   0x00003b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                    SPBRG   0x000faf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   SPBRGH   0x000fb0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 SPItimer   0x000028       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+               SSLchannel   0x000108       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                   SSPADD   0x000fc8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   SSPBUF   0x000fc9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  SSPCON1   0x000fc6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              SSPCON1bits   0x000fc6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  SSPCON2   0x000fc5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              SSPCON2bits   0x000fc5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  SSPSTAT   0x000fc7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              SSPSTATbits   0x000fc7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   STATUS   0x000fd8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               STATUSbits   0x000fd8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   STKPTR   0x000ffc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               STKPTRbits   0x000ffc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               ScaleRatio   0x0000f8       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                   SeqCnt   0x000111       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                 SeqDelay   0x000113       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                SettleCnt   0x0000f0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+              SettleDelay   0x0000ec       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+               SettleThrs   0x0000f2       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                ShopSlots   0x000033       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                    Steps   0x000100       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+         StoredSwitchBits   0x0000ff       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SWITCHES_routine.c
+                    T0CON   0x000fd5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                T0CONbits   0x000fd5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    T1CON   0x000fcd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                T1CONbits   0x000fcd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    T2CON   0x000fca       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                T2CONbits   0x000fca       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    T3CON   0x000fb1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                T3CONbits   0x000fb1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   TABLAT   0x000ff5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   TBLPTR   0x000ff6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  TBLPTRH   0x000ff7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  TBLPTRL   0x000ff6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  TBLPTRU   0x000ff8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TMR0H   0x000fd7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TMR0L   0x000fd6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TMR1H   0x000fcf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TMR1L   0x000fce       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     TMR2   0x000fcc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TMR3H   0x000fb3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TMR3L   0x000fb2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                      TOL   0x0000ea       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                      TOS   0x000ffd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     TOSH   0x000ffe       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     TOSL   0x000ffd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     TOSU   0x000fff       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TRISA   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                TRISAbits   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TRISB   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                TRISBbits   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TRISC   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                TRISCbits   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TRISD   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                TRISDbits   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TRISE   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                TRISEbits   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TXREG   0x000fad       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TXSTA   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                TXSTAbits   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                TestPhase   0x00010e       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                     Tick   0x000102       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                 TickMain   0x000036       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+            TicksPerFrame   0x000034       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                 TopLimit   0x0000f4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                        W   0x000fe8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   WDTCON   0x000fd1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               WDTCONbits   0x000fd1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     WREG   0x000fe8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                WorkFader   0x000025       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                 __AARGB0   0x000044       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB1   0x000043       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB2   0x000042       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB3   0x000041       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB4   0x000040       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB5   0x00003f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB6   0x00003e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB7   0x00003d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                   __AEXP   0x000045       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __BARGB0   0x000049       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB1   0x000048       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB2   0x000047       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB3   0x000046       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                   __BEXP   0x00004a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                __FPFLAGS   0x00003c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x00003c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                  __REMB0   0x000040       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB1   0x00003f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB2   0x00003e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB3   0x00003d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                   __TEMP   0x00004e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB0   0x00004e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB1   0x00004d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB2   0x00004c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB3   0x00004b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                  __tmp_0   0x000000       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\fabs.c
+                  __tmp_0   0x000000       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcsetch.c
+                  __tmp_0   0x000000       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\PWM\pw2setdc.c
+                  __tmp_0   0x000000       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\PWM\pw1setdc.c
+                  __tmp_0   0x000000       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                  __tmp_0   0x000000       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SWITCHES_routine.c
+                  __tmp_0   0x000000       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+                  __tmp_0   0x000000       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                  __tmp_0   0x000000       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
+                  __tmp_2   0x00004f       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                curr_byte   0x00012a       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               curr_entry   0x00012c       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                       dK   0x0000de       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                 data_ptr   0x00012e       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                   fspeed   0x00011b       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                     gain   0x0000e2       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+               iError_max   0x0000ee       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                       iK   0x0000da       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                   iKmult   0x0000e6       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                 inbuffer   0x000037       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+                    index   0x000135       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+               lastiError   0x000119       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+               lastpError   0x000117       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+          localTouchSense   0x000136       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+                     lstP   0x000123       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                   maxPWM   0x0000d4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                outbuffer   0x000039       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+                       pK   0x0000d6       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                     prom   0x000127       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                syncByte1   0x000031       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                syncByte2   0x000032       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                  testVal   0x00010d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+              touch_press   0x000133       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SWITCHES_routine.c
+                touch_rel   0x000131       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SWITCHES_routine.c
+                      xID   0x000109       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   _entry   0x000000    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+       ___return_lbl00000   0x000004    program     static                          
+                   __init   0x000006    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+ interrupt_at_high_vector   0x000008    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+       ___return_lbl00000   0x00000c    program     static                          
+                  BusyADC   0x00000e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcbusy.c
+  interrupt_at_low_vector   0x000018    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+       ___return_lbl00001   0x00001c    program     static                          
+              HighISRCode   0x00001e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+               LowISRCode   0x000080    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+      Calculate_Motor_PWM   0x0002d2    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+             Handle_Fader   0x0005ba    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                Start_ADC   0x00081e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                 Read_ADC   0x00082c    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                 SetScale   0x000a04    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                     main   0x000a8c    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                     Init   0x000b08    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+               Init_Fader   0x000ba4    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                 FLO3232U   0x000d68    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cast32FP.asm
+                 FLO3232S   0x000d6c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cast32FP.asm
+                jI2F32Beg   0x000d84    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cast32FP.asm
+                 FXD3232S   0x000d9e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                  DA3232S   0x000db8    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                   D3232S   0x000dce    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                 D3232SOK   0x000dd8    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                D3232SNEG   0x000ddc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                  D3232SX   0x000dfc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232s.asm
+                 FXM1616S   0x000e06    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+               TSIGN1616A   0x000e52    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                 FXM1616U   0x000e60    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616u.asm
+                  INT3216   0x000e9c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                     jMax   0x000eac    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jMaxPos   0x000eb0    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jMaxNeg   0x000eba    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                    jZero   0x000ec2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jNotInf   0x000ec8    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                    jLoop   0x000ed8    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                jLoopExit   0x000ee8    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                    jExit   0x000ef8    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+            __FpReturnNaN   0x000efa    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                 __FpExit   0x000f06    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnSignInf   0x000f08    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+         __FpReturnNegInf   0x000f0c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+         __FpReturnPosInf   0x000f12    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+           jReturnPosInf0   0x000f16    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+               jZero1and2   0x000f1a    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+       __FpReturnSignZero   0x000f20    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnNegZero   0x000f24    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnPosZero   0x000f2c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                 __FpPack   0x000f32    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                  jPkLoop   0x000f40    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+             jPkShiftDone   0x000f5c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+               jPkRoundIt   0x000f72    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+             jPkRoundDone   0x000f8a    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+              __FpReturnW   0x000f8a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+              __FpUnPackA   0x000faa    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkA1   0x000fb4    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkANZ   0x000fc2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkA2   0x000fcc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkNaN   0x000fd6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+              __FpUnPackB   0x000fda    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkB1   0x000fe4    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkBNZ   0x000ff2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkB2   0x000ffc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+  Update_LED_Display_Bits   0x001006    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+       Update_LED_Display   0x001098    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+                SlideShow   0x001160    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+              Handle_LEDs   0x0011d6    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+            Read_Switches   0x001276    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SWITCHES_routine.c
+         Start_Scan_Touch   0x0013d0    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SWITCHES_routine.c
+               Scan_Touch   0x0013f2    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SWITCHES_routine.c
+                _do_cinit   0x0014c4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x0014de    program     static                          
+                copy_loop   0x001536    program     static                          
+            copy_one_byte   0x00153c    program     static                          
+             done_copying   0x00154a    program     static                          
+       ___return_lbl00002   0x001560    program     static                          
+                     done   0x001560    program     static                          
+                 OpenPWM2   0x001562    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\PWM\pw2open.c
+         ___else_lbl00002   0x00159e    program     static                          
+           ___if_lbl00001   0x0015a2    program     static                          
+         ___else_lbl00004   0x0015ac    program     static                          
+           ___if_lbl00003   0x0015ae    program     static                          
+       ___return_lbl00000   0x0015c0    program     static                          
+                 Read_SPI   0x0015d8    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+                Write_SPI   0x0015f0    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+                  getData   0x001600    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+                 setData1   0x001622    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+                 setData2   0x001638    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+                  FXM3232   0x00164e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+       ___return_lbl00000   0x0016bc    program     static                          
+                  OpenADC   0x0016be    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
+                  OpenSPI   0x00172c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\SPI\spi_open.c
+                     fabs   0x001794    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\fabs.c
+                SetDCPWM2   0x0017fa    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\PWM\pw2setdc.c
+                SetDCPWM1   0x001858    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\PWM\pw1setdc.c
+                 FXD3232U   0x0018b6    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                     loop   0x0018c4    program     static                          
+                   _false   0x0018f8    program     static                          
+       ___return_lbl00000   0x0018fc    program     static                          
+               OpenTimer0   0x0018fe    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
+               OpenTimer2   0x001936    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t2open.c
+                 OpenPWM1   0x00196c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\PWM\pw1open.c
+         OpenPWM1ConfigIO   0x001998    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\PWM\pw1open.c
+               SetChanADC   0x00199c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcsetch.c
+                 FXD1616U   0x0019ca    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                     loop   0x0019d4    program     static                          
+                  endloop   0x0019f0    program     static                          
+       ___return_lbl00000   0x0019f4    program     static                          
+            __zero_memory   0x0019f6    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_h   0x001a04    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               zero_block   0x001a04    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                compare_l   0x001a0c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_l   0x001a0e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 _startup   0x001a16    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x001a26    program     static                          
+       ___return_lbl00001   0x001a30    program     static                          
+                 FXD0808U   0x001a32    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808u.c
+                     loop   0x001a3a    program     static                          
+                  endloop   0x001a48    program     static                          
+       ___return_lbl00000   0x001a4c    program     static                          
+               ConvertADC   0x001a4e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
+               __config_0   0x300003    program     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                  __tmp_0   0x000000       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\PWM\pw1setdc.c
+                  __tmp_0   0x000000       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\PWM\pw2setdc.c
+                  __tmp_0   0x000000       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcsetch.c
+                  __tmp_0   0x000000       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\fabs.c
+                  __tmp_0   0x000000       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                  __tmp_0   0x000000       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SWITCHES_routine.c
+                  __tmp_0   0x000000       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                  __tmp_0   0x000000       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
+                  __tmp_0   0x000000       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+        PreviousFaderGoal   0x000020       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                FaderGoal   0x000022       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                NewDataIn   0x000024       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                WorkFader   0x000025       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                  LoopCnt   0x000026       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                 SPItimer   0x000028       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+             InitCntDelay   0x00002a       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+           FaderGoalSteps   0x00002c       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+            FaderPosition   0x00002e       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                 I2Cstate   0x000030       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                syncByte1   0x000031       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                syncByte2   0x000032       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                ShopSlots   0x000033       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+            TicksPerFrame   0x000034       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                 TickMain   0x000036       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                 inbuffer   0x000037       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+                outbuffer   0x000039       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+                     SIGN   0x00003b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                __FPFLAGS   0x00003c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x00003c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                 __AARGB7   0x00003d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB3   0x00003d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB6   0x00003e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB2   0x00003e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB5   0x00003f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB1   0x00003f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB4   0x000040       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB0   0x000040       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB3   0x000041       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB2   0x000042       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB1   0x000043       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB0   0x000044       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                   __AEXP   0x000045       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __BARGB3   0x000046       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB2   0x000047       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB1   0x000048       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB0   0x000049       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                   __BEXP   0x00004a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __TEMPB3   0x00004b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB2   0x00004c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB1   0x00004d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                   __TEMP   0x00004e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB0   0x00004e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                  __tmp_2   0x00004f       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                 SEGMENTA   0x000080       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+                 SEGMENTB   0x00009a       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+                  LETTERA   0x0000b4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+                  LETTERB   0x0000c4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\LED_routine.c
+                   maxPWM   0x0000d4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                       pK   0x0000d6       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                       iK   0x0000da       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                       dK   0x0000de       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                     gain   0x0000e2       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                   iKmult   0x0000e6       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                      TOL   0x0000ea       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+              SettleDelay   0x0000ec       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+               iError_max   0x0000ee       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                SettleCnt   0x0000f0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+               SettleThrs   0x0000f2       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                 TopLimit   0x0000f4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                 BotLimit   0x0000f6       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+               ScaleRatio   0x0000f8       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                 LastGoal   0x0000fc       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+               LocalTouch   0x0000fe       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SWITCHES_routine.c
+         StoredSwitchBits   0x0000ff       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SWITCHES_routine.c
+                    Steps   0x000100       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                     Tick   0x000102       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                 BlinkCnt   0x000104       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                   AttCnt   0x000106       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+               SSLchannel   0x000108       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                      xID   0x000109       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+           AttentionBlink   0x00010a       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                 BlinkLED   0x00010b       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+               FaderReady   0x00010c       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                  testVal   0x00010d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                TestPhase   0x00010e       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                  InitCnt   0x00010f       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                   SeqCnt   0x000111       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                 SeqDelay   0x000113       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+                FaderGoal   0x000115       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main3.0.c
+               lastpError   0x000117       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+               lastiError   0x000119       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                   fspeed   0x00011b       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                    D_REG   0x00011f       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                  D_SPEED   0x000121       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                     lstP   0x000123       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\PWM_routine.c
+                     prom   0x000127       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                curr_byte   0x00012a       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               curr_entry   0x00012c       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                 data_ptr   0x00012e       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                touch_rel   0x000131       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SWITCHES_routine.c
+              touch_press   0x000133       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SWITCHES_routine.c
+                    index   0x000135       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+          localTouchSense   0x000136       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\SPI_routine.c
+                    PORTA   0x000f80       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                PORTAbits   0x000f80       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                PORTBbits   0x000f81       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    PORTB   0x000f81       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                PORTCbits   0x000f82       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    PORTC   0x000f82       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                PORTDbits   0x000f83       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    PORTD   0x000f83       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                PORTEbits   0x000f84       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    PORTE   0x000f84       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 LATAbits   0x000f89       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     LATA   0x000f89       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 LATBbits   0x000f8a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     LATB   0x000f8a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     LATC   0x000f8b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 LATCbits   0x000f8b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     LATD   0x000f8c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 LATDbits   0x000f8c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 LATEbits   0x000f8d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     LATE   0x000f8d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 DDRAbits   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     DDRA   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TRISA   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                TRISAbits   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                TRISBbits   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TRISB   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 DDRBbits   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     DDRB   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 DDRCbits   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                TRISCbits   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TRISC   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     DDRC   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                TRISDbits   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TRISD   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     DDRD   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 DDRDbits   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 DDREbits   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     DDRE   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                TRISEbits   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TRISE   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  OSCTUNE   0x000f9b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              OSCTUNEbits   0x000f9b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 PIE1bits   0x000f9d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     PIE1   0x000f9d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     PIR1   0x000f9e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 PIR1bits   0x000f9e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     IPR1   0x000f9f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 IPR1bits   0x000f9f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 PIE2bits   0x000fa0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     PIE2   0x000fa0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 PIR2bits   0x000fa1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     PIR2   0x000fa1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     IPR2   0x000fa2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 IPR2bits   0x000fa2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               EECON1bits   0x000fa6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   EECON1   0x000fa6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   EECON2   0x000fa7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   EEDATA   0x000fa8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    EEADR   0x000fa9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    RCSTA   0x000fab       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                RCSTAbits   0x000fab       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TXSTA   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                TXSTAbits   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TXREG   0x000fad       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    RCREG   0x000fae       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    SPBRG   0x000faf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   SPBRGH   0x000fb0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    T3CON   0x000fb1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                T3CONbits   0x000fb1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TMR3L   0x000fb2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TMR3H   0x000fb3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                CMCONbits   0x000fb4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    CMCON   0x000fb4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               CVRCONbits   0x000fb5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   CVRCON   0x000fb5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  ECCP1AS   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              ECCP1ASbits   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   ECCPAS   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               ECCPASbits   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 ECCP1DEL   0x000fb7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+             ECCP1DELbits   0x000fb7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  PWM1CON   0x000fb7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              PWM1CONbits   0x000fb7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              BAUDCONbits   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  BAUDCON   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  BAUDCTL   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              BAUDCTLbits   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              CCP2CONbits   0x000fba       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  CCP2CON   0x000fba       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    CCPR2   0x000fbb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   CCPR2L   0x000fbb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   CCPR2H   0x000fbc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  CCP1CON   0x000fbd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              CCP1CONbits   0x000fbd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   CCPR1L   0x000fbe       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    CCPR1   0x000fbe       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   CCPR1H   0x000fbf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               ADCON2bits   0x000fc0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   ADCON2   0x000fc0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               ADCON1bits   0x000fc1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   ADCON1   0x000fc1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   ADCON0   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               ADCON0bits   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    ADRES   0x000fc3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   ADRESL   0x000fc3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   ADRESH   0x000fc4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  SSPCON2   0x000fc5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              SSPCON2bits   0x000fc5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  SSPCON1   0x000fc6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              SSPCON1bits   0x000fc6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  SSPSTAT   0x000fc7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              SSPSTATbits   0x000fc7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   SSPADD   0x000fc8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   SSPBUF   0x000fc9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                T2CONbits   0x000fca       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    T2CON   0x000fca       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                      PR2   0x000fcb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     TMR2   0x000fcc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                T1CONbits   0x000fcd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    T1CON   0x000fcd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TMR1L   0x000fce       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TMR1H   0x000fcf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     RCON   0x000fd0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 RCONbits   0x000fd0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   WDTCON   0x000fd1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               WDTCONbits   0x000fd1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  HLVDCON   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              HLVDCONbits   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   LVDCON   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               LVDCONbits   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   OSCCON   0x000fd3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               OSCCONbits   0x000fd3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    T0CON   0x000fd5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                T0CONbits   0x000fd5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TMR0L   0x000fd6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    TMR0H   0x000fd7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               STATUSbits   0x000fd8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   STATUS   0x000fd8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     FSR2   0x000fd9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    FSR2L   0x000fd9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    FSR2H   0x000fda       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   PLUSW2   0x000fdb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  PREINC2   0x000fdc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 POSTDEC2   0x000fdd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 POSTINC2   0x000fde       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    INDF2   0x000fdf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                      BSR   0x000fe0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    FSR1L   0x000fe1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     FSR1   0x000fe1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    FSR1H   0x000fe2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   PLUSW1   0x000fe3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  PREINC1   0x000fe4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 POSTDEC1   0x000fe5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 POSTINC1   0x000fe6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    INDF1   0x000fe7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                        W   0x000fe8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     WREG   0x000fe8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     FSR0   0x000fe9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    FSR0L   0x000fe9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    FSR0H   0x000fea       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   PLUSW0   0x000feb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  PREINC0   0x000fec       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 POSTDEC0   0x000fed       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 POSTINC0   0x000fee       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    INDF0   0x000fef       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              INTCON3bits   0x000ff0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  INTCON3   0x000ff0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+              INTCON2bits   0x000ff1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  INTCON2   0x000ff1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               INTCONbits   0x000ff2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   INTCON   0x000ff2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    PRODL   0x000ff3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     PROD   0x000ff3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                    PRODH   0x000ff4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   TABLAT   0x000ff5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   TBLPTR   0x000ff6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  TBLPTRL   0x000ff6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  TBLPTRH   0x000ff7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                  TBLPTRU   0x000ff8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                       PC   0x000ff9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                      PCL   0x000ff9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   PCLATH   0x000ffa       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   PCLATU   0x000ffb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               STKPTRbits   0x000ffc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   STKPTR   0x000ffc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     TOSL   0x000ffd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                      TOS   0x000ffd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     TOSH   0x000ffe       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     TOSU   0x000fff       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+
+

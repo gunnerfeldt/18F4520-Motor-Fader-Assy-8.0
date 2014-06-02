@@ -1,0 +1,5 @@
+Warning[2001] C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main(der filter).c 117 : non-near symbol 'I2CSTATbits' declared in access section 'volatile_access'
+Warning[2001] C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main(der filter).c 149 : non-near symbol 'FADER_IN' declared in access section 'volatile_access'
+Warning[2001] C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main(der filter).c 153 : non-near symbol 'fspeed' declared in access section 'volatile_access'
+Warning[2001] C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main(der filter).c 165 : non-near symbol 'index' declared in access section 'volatile_access'
+Warning[2001] C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main(der filter).c 166 : non-near symbol 'address' declared in access section 'volatile_access'

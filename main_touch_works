@@ -1,0 +1,592 @@
+///////////////////////////////////////////////////////////////
+// PICJOESI2CSLAVE
+//
+// An I2C slave test program
+// in 'C'
+//
+// (C) 2008 J.W.Brown
+//
+///////////////////////////////////////////////////////////////
+#include <p18f4520.h>   /* for TRIS and PORT declarations */
+#include <delays.h>	   /* Delays declarations */
+#include <usart.h>	   /* Serial UART stuff */
+#include <i2c.h>	/* Master Synchonous Serial I2C */	
+#include <timers.h>
+#include <adc.h>
+#include <math.h>
+
+#include <pwm.h>
+
+
+/* Set configuration bits:
+ *  - set HSPLL oscillator (10Mhz xtal, 40Mhz Osc
+ *  - disable watchdog timer
+ *  - disable low voltage programming
+ *
+ */
+ 
+//#pragma config OSC= HSPLL
+//#pragma config WDT=OFF
+//#pragma config LVP=OFF
+
+#define BUFSIZE 2
+// #define SW  !PORTCbits.RC6
+// allocate some resources in ACCESS RAM for speedy access in interrupt routines
+// all locations in this section are volatile
+#pragma udata access volatile_access
+
+ram near unsigned char sspcon1copy;
+ram near unsigned char address;
+ram near unsigned char data;
+ram near unsigned char rxbuf[BUFSIZE];
+ram near unsigned char txbuf[BUFSIZE];
+ram near unsigned char rxcount, txcount;
+ram near unsigned int PWM;
+
+char PWMflag =0;
+char I2Cflag =0;
+
+const unsigned char MANUAL = 0x00;
+const unsigned char AUTO = 0x04;
+const unsigned char TOUCH = 0x08;
+const unsigned char WRITE = 0x0C;
+const unsigned char MUTE = 0x80;
+const unsigned char MOTOR_ENABLE = 0x10;
+const unsigned char ERROR_MASK = 0x60;
+const unsigned char ERROR_CHECK = 0x40;
+const unsigned char FADERSTATUS = 0x0C;
+const int touch_sensivity = 261;			//261
+unsigned char indata[2];
+float lastpError;
+float lastiError;
+float pError;
+float iError;
+float dError;
+float pK;
+float iK;
+float dK;
+float gain;
+float time_interval;
+float derTime;
+float intTime;
+int tol;
+
+
+int motorstart;
+unsigned int speed;
+float fspeed;
+int iError_max;
+
+int simCnt = 0;
+double sim =1000;
+
+int fader_goal = 0;
+int fader_int_goal = 0;
+double fader_dbl_goal = 0;
+int fader_compare = 0;
+unsigned int fader_pos = 0;
+unsigned char fader_address = 0;
+unsigned char fader_status = 0;
+unsigned char local_fader_status = 0;
+unsigned int fader_touch_sens = 0;
+unsigned char touch;
+unsigned int touch_rel;
+unsigned int touch_press;
+unsigned char new_data = 0;
+unsigned char soft_motor_on = 0;
+unsigned char BlinkLED = 0;
+unsigned int BlinkCnt = 0;
+unsigned int FakeCnt = 0;
+unsigned char PWMCnt = 0;
+unsigned double acc_fader_pos;
+unsigned char DIG_TOGGLE;
+
+#define motor_enable LATCbits.LATC0
+
+#define AUTO_LED  LATBbits.LATB0
+#define TOUCH_LED  LATBbits.LATB1
+#define WRITE_LED  LATBbits.LATB2
+#define MUTE_LED  LATBbits.LATB3
+
+#define SEG_A  LATDbits.LATD0
+#define SEG_B  LATDbits.LATD1
+#define SEG_C  LATDbits.LATD2
+#define SEG_D  LATDbits.LATD3
+#define SEG_E  LATDbits.LATD4
+#define SEG_F  LATDbits.LATD5
+#define SEG_G  LATDbits.LATD6
+#define SEG_DP  LATDbits.LATD7
+#define DIG_0  LATEbits.LATE0
+#define DIG_1  LATEbits.LATE1
+
+#define ON	0
+#define OFF 1
+
+#define AUTO_SW  !PORTCbits.RC5
+#define TOUCH_SW  !PORTCbits.RC6
+#define WRITE_SW  !PORTCbits.RC7
+#define MUTE_SW  !PORTAbits.RA4
+
+#define COMP_ADC		ADC_CH0
+#define TOUCH_ADC		ADC_CH7
+#define TOUCH_X_ADC		ADC_CH1
+#define TOUCH_X_OUTPUT	TRISAbits.TRISA1 = 0
+#define TOUCH_X_HIGH	LATAbits.LATA1 = 1
+
+#define TOUCH_OUTPUT	TRISEbits.TRISE2 = 0
+#define TOUCH_INPUT		TRISEbits.TRISE2 = 1
+#define TOUCH_HI		LATEbits.LATE2 = 1
+#define TOUCH_LOW		LATEbits.LATE2 = 0
+
+unsigned char fader_adc;
+
+#define bit_set(var,bitno) ((var) |= 1 << (bitno))
+#define bit_clr(var,bitno) ((var) &= ~(1 << (bitno)))
+#define testbit_on(data,bitno) ((data>>bitno)&0x01)
+#define testbitmask(data,bitmask) ((data&bitmask)==bitmask)
+
+#define bits_on(var,mask) var |= mask
+#define bits_off(var,mask) var &= ~0 ^ mask
+
+#define hibyte(x)       (unsigned char)(x>>8)
+#define lobyte(x)        (unsigned char)(x & 0xFF)
+
+#define fader_addr ((PORTA & 0b11100000)>>5)
+
+void InterruptHandlerHigh (void); // prototype for int handler
+void InterruptHandlerLow (void); // prototype for int handler
+void Handle_I2C_1(void);		
+void Handle_I2C_2(void);		// For fake I2C
+void Handle_LEDs(void);		
+void Handle_SWs(void);		
+void Read_Pos(void);		
+unsigned char Scan_Touch(void);		
+void Calculate_PWM(void);		
+void Run_Motor(void);		
+void Init(void);				
+
+
+//----------------------------------------------------------------------------
+// High priority interrupt vector (legacy interrupt)
+#pragma code InterruptVectorHigh = 0x08
+void
+InterruptVectorHigh (void)
+{
+  _asm
+    goto InterruptHandlerHigh //jump to interrupt routine
+  _endasm
+}
+/*
+// Low priority interrupt vector
+#pragma code InterruptVectorLow = 0x18
+void
+InterruptVectorLow (void)
+{
+  _asm
+    goto InterruptHandlerLow //jump to interrupt routine
+  _endasm
+}
+*/
+
+//----------------------------------------------------------------------------
+// High priority interrupt routine (legacy interrupt)
+
+#pragma code
+#pragma interrupt InterruptHandlerHigh
+
+void
+InterruptHandlerHigh () 
+{
+//					AUTO_LED =!AUTO_LED;
+//	INTCONbits.TMR0IE = 0;
+	PIE1bits.TMR2IE = 0;
+
+
+		if (PIR1bits.TMR2IF)	
+			{				
+			if(PWMCnt>4)
+				{
+				PWMflag = 1;
+				PWMCnt = 0;
+				}		
+			if(FakeCnt>40)
+				{
+				FakeCnt = 0;
+				new_data=1;
+				}		
+			if(BlinkCnt>254)
+				{
+				BlinkLED = !BlinkLED;
+				BlinkCnt = 0;
+
+				}
+
+			if (simCnt>5000)
+				{
+				simCnt=0;
+				if(sim == 100)
+					{sim=923;}
+				else
+					{sim=100;}
+				}
+
+			simCnt++;
+			BlinkCnt++;
+			FakeCnt++;
+			PWMCnt++;
+			PIR1bits.TMR2IF = 0;
+			}
+
+
+
+
+
+
+		PIE1bits.TMR2IE = 1;
+//		INTCONbits.TMR0IE = 1;
+//		SSPCON1bits.CKP = 1; // release clock line
+}
+/*
+#pragma interrupt InterruptHandlerLow
+
+void InterruptHandlerLow(void)
+{
+
+}
+*/
+#pragma code 
+
+void main(void)
+{
+	Init();
+
+	while (1) // loop forever
+	{
+
+//		AUTO_LED = BlinkLED;
+	if (new_data)
+		{	
+		Handle_I2C_2();
+//		AUTO_LED = !(Scan_Touch() & BlinkLED);
+//		AUTO_LED =!AUTO_LED;
+		INTCONbits.GIE = 0;
+//		Handle_SWs();
+//		Handle_LEDs();
+//		Read_Pos();	
+//		Run_Motor();
+		new_data =0;
+
+		fader_dbl_goal = (fader_int_goal*0.50) + (fader_goal*0.50);
+		fader_int_goal = fader_dbl_goal;
+	
+
+		INTCONbits.GIE = 1;
+		}
+
+
+		if (PWMflag ==1)
+
+			{
+
+
+				WRITE_LED = !(Scan_Touch() & BlinkLED);
+				soft_motor_on = 1;
+
+		
+				Calculate_PWM();	
+				Run_Motor();
+
+
+
+				PWMflag=0;
+			}
+
+
+	}
+}
+
+
+
+//#define TOUCH_ADC			ADC_CH11
+//#define TOUCH_X_ADC		ADC_CH9
+//#define TOUCH_X_OUTPUT	TRISBbits.TRISB3 = 0
+//#define TOUCH_X_HIGH		LATBbits.LATB3 = 1
+//#define TOUCH_OUTPUT		TRISBbits.TRISB4 = 0
+//#define TOUCH_INPUT		TRISBbits.TRISB4 = 1
+//#define TOUCH_LOW			LATBbits.LATB4 = 0
+
+unsigned char Scan_Touch(void)
+	{		
+	TOUCH_X_OUTPUT;
+	TOUCH_X_HIGH;
+	SetChanADC(TOUCH_X_ADC);
+	TOUCH_OUTPUT;
+	TOUCH_LOW;
+	TOUCH_INPUT;
+
+//	TOUCH_OUTPUT;
+//	TOUCH_HI;
+//	TOUCH_LOW;
+//	TOUCH_INPUT;
+
+	SetChanADC(TOUCH_ADC);
+	ConvertADC();
+	while( BusyADC() );
+	fader_touch_sens = ADRESH;
+	fader_touch_sens = fader_touch_sens << 8;
+	fader_touch_sens = fader_touch_sens + ADRESL;
+
+
+	if (fader_touch_sens<210) 
+		{	
+		if (touch_press > 2) 
+			{touch = 1;
+			touch_rel = 0;}
+		else 
+			{touch_press +=1;}
+		}
+	else
+		{
+		if (touch_rel > 16) touch_press = 0;
+		if (touch_rel > 48) 
+			{touch = 0;
+//			touch_press = 0;
+			}
+		else 
+			{touch_rel +=1;}			
+		}
+	return touch;
+	}	
+void Read_Pos(void)
+	{	
+	SetChanADC(ADC_CH0);
+	ConvertADC();
+	while( BusyADC() );
+	
+	fader_pos = ADRESH;
+	fader_pos = fader_pos << 8;
+	fader_pos = fader_pos + ADRESL;
+//				SetDCPWM1(fader_pos);	
+	
+	}	
+
+
+void Calculate_PWM(void)
+	{	
+	SetChanADC(COMP_ADC);
+	ConvertADC();
+	while( BusyADC() );
+	
+
+	fader_compare = ADRESH;
+	fader_compare = fader_compare << 8;
+	fader_compare = fader_compare + ADRESL;
+	acc_fader_pos = (acc_fader_pos*0.5) + (fader_compare*0.5);
+	fader_compare = acc_fader_pos;
+
+
+			pError = fader_int_goal-fader_compare;
+
+			if (fabs(pError)<tol) iError =0; 
+
+			if (iError>iError_max) iError =iError_max;
+			if (iError<-iError_max) iError =-iError_max;
+
+			iError = iError + (lastpError*intTime);
+			if (fabs(lastpError)>fabs(pError)) iError *= (1-intTime);
+
+			{dError = (lastpError - pError)*derTime/time_interval;}
+
+
+
+			fspeed = (((pK*pError)+(iK*iError)+(dK*dError))*gain);
+			
+			lastpError = pError;
+
+				
+			speed = fabs(fspeed);
+
+	
+			if(speed>1023) speed = 1023;
+			PWM=speed;
+	}
+	
+void Handle_SWs(void)
+	{
+//	local_fader_status = 0;	
+//	if(SW) local_fader_status = 0x08;
+//	local_fader_status += (fader_touch_sens*0x10);
+	}	
+	
+void Handle_LEDs(void)
+	{
+		AUTO_LED = (!testbitmask(indata[1],AUTO));
+		TOUCH_LED = !testbitmask(indata[1],TOUCH);
+		WRITE_LED = !testbitmask(indata[1],WRITE);
+		MUTE_LED = !testbitmask(indata[1],MUTE);
+
+		if (touch) WRITE_LED = BlinkLED;
+		if (touch) AUTO_LED = BlinkLED;
+
+	}		
+void Run_Motor(void)
+	{
+	unsigned int dutycycle ;
+
+	if (touch)
+		{
+		SetDCPWM2(0);
+		SetDCPWM1(0);
+		motor_enable = 0;
+		return;
+		}
+		
+	
+	INTCONbits.GIE = 0;
+//	PWM *= PWM;PWM/=1023;
+	dutycycle = PWM;
+
+	INTCONbits.GIE = 1;	
+	if (fabs(fader_compare-fader_int_goal)>tol)
+		{
+		if (dutycycle<motorstart) dutycycle = 0;
+//			{
+			if(fspeed>0)
+				{
+				SetDCPWM2(dutycycle);
+				SetDCPWM1(0);
+//				SetDCPWM2(1023-dutycycle);
+//				motor_enable = (!fader_touch_sens & soft_motor_on);
+				motor_enable = 1;
+
+				}
+			else
+				{
+				SetDCPWM1(dutycycle);
+				SetDCPWM2(0);
+//				SetDCPWM1(1023-dutycycle);
+//				motor_enable = (!fader_touch_sens & soft_motor_on);
+				motor_enable = 1;
+				}
+
+		}	
+	else
+		{
+
+		SetDCPWM2(0);
+		SetDCPWM1(0);
+		motor_enable = 0;
+		}
+	}	
+		
+void Handle_I2C_1(void)
+	{	
+
+;
+	}	
+void Handle_I2C_2(void)
+	{
+
+	fader_goal = 512;
+	}
+
+void Init(void)
+	{
+	OSCTUNEbits.TUN0 = 1;
+	OSCTUNEbits.TUN1 = 1;
+	OSCTUNEbits.TUN2 = 1;
+	OSCTUNEbits.TUN3 = 1;
+	OSCTUNEbits.TUN4 = 1;
+	OSCCONbits.IRCF0 = 1;
+	OSCCONbits.IRCF1 = 1;
+	OSCCONbits.IRCF2 = 1;
+	OSCTUNEbits.PLLEN = 1;
+	// initialise buffer ptrs and counts to 0
+	rxcount = txcount = 0;
+
+	TRISA = 0xFF;
+	TRISB = 0xF0;	
+	TRISC = 0xF8;
+	TRISD = 0x00;
+	TRISE = 0xFC;
+
+//	TRISCbits.TRISC1 =0;
+//	TRISCbits.TRISC2 =0;
+	// setup I2C module
+	SSPCON1 = 0x36 + 0x00; 	//  bit 5=1: enable I2C
+							//  bit 4=1: release clock
+							//  bits3:0: SSPM3:SSPM0; I2C Slave mode with 7bit address, no interrupts on start or stop bits
+	
+	fader_address = fader_addr;
+//	SSPADD = 0xE0 + fader_address; // slave address
+	SSPADD = 0xE0 + 0; // slave address
+
+	// enable interrupts - legacy mode
+	INTCONbits.PEIE = 1;
+	INTCONbits.GIE = 1;
+	PIE1bits.SSPIE = 1; // SSP interrupt enable
+// 	INTCONbits.TMR0IE=1; //enable TMR0 overflow interrupt enable bit
+ 	PIE1bits.TMR2IE=1; //enable TMR0 overflow interrupt enable bit
+
+//  	OpenTimer0 (TIMER_INT_ON & T0_SOURCE_INT & T0_8BIT & T0_PS_1_256);
+
+	OpenADC(	ADC_FOSC_32     &
+				ADC_RIGHT_JUST	&
+				ADC_2_TAD,
+				ADC_CH12		&
+				ADC_INT_OFF		&
+				ADC_VREFPLUS_EXT
+				, 15 );
+	//			ADC_VREFPLUS_EXT
+	ADCON1 = 0x0C;
+//	T2CON.TMR2ON = 1;
+	
+//	AUTO_LED = 0;
+
+
+// for L6202 chip
+
+
+	fader_adc = COMP_ADC; 
+	tol = 1;
+	gain = 0.500;				// 1
+	pK = 25;				
+	iK = 25.000; // 10
+	dK = 0.15;	// 0.20
+	intTime = 0.5;			// 0.19
+	iError_max = 2023;
+	derTime = -2;			// 1
+	time_interval = 0.0015;	// 1
+	motorstart =0;
+
+
+// for TCA0372 chip
+
+/*
+	fader_adc = COMP_ADC; 
+	tol = 1;
+	gain = 0.700;				// 1
+	pK = 25;				
+	iK = 15; // 10
+	dK = 0.2;	// 0.20
+	intTime = 0.5;			// 0.19
+	iError_max = 2023;
+	derTime = -2;			// 1
+	time_interval = 0.0015;	// 1
+	motorstart =100;
+*/
+
+	// T2_PS_1_1, T2_PS_1_4, T2_PS_1_16 - Prescaler
+	// T2_POST_1_1 to 1_16 - Postscaler, not for PWM. Only for interrupt
+//	OpenTimer2(T2_PS_1_16 & TIMER_INT_ON & T2_POST_1_8);	// 1.952 kHz
+	OpenTimer2(T2_PS_1_1 & TIMER_INT_ON & T2_POST_1_16);	// 31.248 kHz
+
+	
+	// OpenPWM1(0 to 255)  PWM period value
+	OpenPWM1(255);									// Turn PWM on
+	SetDCPWM1(0); 
+
+	OpenPWM2(255);									// Turn PWM on
+	SetDCPWM2(0);  
+	}
+

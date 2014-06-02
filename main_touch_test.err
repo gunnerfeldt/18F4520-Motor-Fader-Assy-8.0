@@ -1,0 +1,2 @@
+Warning[2001] C:\Documents and Settings\Pelle\My Documents\PIC Code Jan 2010\Motor Fader v6.2 18F4520 - Touch Test\main_touch_test.c 50 : non-near symbol 'touch' declared in access section 'volatile_access'
+Warning[2001] C:\Documents and Settings\Pelle\My Documents\PIC Code Jan 2010\Motor Fader v6.2 18F4520 - Touch Test\main_touch_test.c 55 : non-near symbol 'indata' declared in access section 'volatile_access'

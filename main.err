@@ -1,0 +1,4 @@
+Warning[2001] C:\Documents and Settings\Pelle\My Documents\PIC Code Jan 2010\Motor Fader v6.2 18F4520 - Touch Test\main.c 114 : non-near symbol 'I2CSTATbits' declared in access section 'volatile_access'
+Warning[2001] C:\Documents and Settings\Pelle\My Documents\PIC Code Jan 2010\Motor Fader v6.2 18F4520 - Touch Test\main.c 143 : non-near symbol 'fspeed' declared in access section 'volatile_access'
+Warning[2001] C:\Documents and Settings\Pelle\My Documents\PIC Code Jan 2010\Motor Fader v6.2 18F4520 - Touch Test\main.c 150 : non-near symbol 'index' declared in access section 'volatile_access'
+Warning[2001] C:\Documents and Settings\Pelle\My Documents\PIC Code Jan 2010\Motor Fader v6.2 18F4520 - Touch Test\main.c 151 : non-near symbol 'address' declared in access section 'volatile_access'

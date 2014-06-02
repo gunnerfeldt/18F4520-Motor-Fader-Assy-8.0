@@ -1,0 +1,4 @@
+Warning[2058] C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main2.0.c 162 : call of function without prototype
+Warning[2058] C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main2.0.c 201 : call of function without prototype
+Warning[2058] C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main2.0.c 202 : call of function without prototype
+Warning[2001] C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\main2.0.c 105 : non-near symbol 'I2CSTATbits' declared in access section 'volatile_access'
